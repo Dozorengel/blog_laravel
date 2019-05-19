@@ -17,6 +17,8 @@ class ProjectTasksController extends Controller
 
         return back();
     }
+
+    //* Deprecated
     public function update(Task $task)
     {
         $method = request()->has('completed') ? 'complete' : 'incomplete';
