@@ -26,7 +26,7 @@ class AuthServiceProvider extends ServiceProvider
         $this->registerPolicies();
 
         Gate::before(function ($user) {
-            return $user->id == 1; //this is an admin id
+            return $user->id == 1; //* this is an admin id
         });
     }
 }
