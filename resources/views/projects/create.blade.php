@@ -1,30 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layout')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Create new project</title>
-</head>
+@section('content')
+<form action="/projects" method="POST">
+    {{ csrf_field() }}
+    <h1 class="title">Create a New Project</h1>
 
-<body>
-    <form action="/projects" method="POST">
-        {{ csrf_field() }}
-        <h1>Create a New Project</h1>
+    <div>
+        <input type="text" class="input" name="title" placeholder="Project title">
+    </div>
 
-        <div>
-            <input type="text" name="title" placeholder="Project title">
-        </div>
+    <div>
+        <input type="text" class="input" name="description" placeholder="Project description">
+    </div>
 
-        <div>
-            <input type="text" name="description" placeholder="Project description">
-        </div>
+    <div>
+        <button type="submit" class="button">Create Project</button>
+    </div>
+</form>
 
-        <div>
-            <button type="submit">Create Project</button>
-        </div>
-    </form>
-</body>
-
-</html>
+@endsection
