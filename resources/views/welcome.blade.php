@@ -8,6 +8,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
 
         <!-- Styles -->
         <style>
@@ -64,7 +65,9 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+        <div id="app" class="flex-center position-ref full-height">
+            <example-component></example-component>
+
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -95,5 +98,7 @@
                 </div>
             </div>
         </div>
+
+        <script src="{{ mix('js/app.js') }}"></script>
     </body>
 </html>
