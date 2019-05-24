@@ -1,4 +1,5 @@
 <?php
+use App\Notifications\SubscriptionRenewalFailed;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::get('/', function () {
+//     $user = App\User::first();
+
+//     $user->notify(new SubscriptionRenewalFailed);
+
+//     return 'Done';
+// });
 
 Route::resource('projects', 'ProjectController');
 
