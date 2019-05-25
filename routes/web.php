@@ -13,6 +13,8 @@ use App\Notifications\SubscriptionRenewalFailed;
 */
 
 Route::get('/', function () {
+    // session(['name' => 'JohnDoe']);
+    // return session('name');
     return view('welcome');
 });
 
