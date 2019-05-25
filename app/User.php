@@ -28,6 +28,16 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function isVerified()
+    {
+        return (bool) $this->email_verified_at;
+    }
+
+    public function isNotVerified()
+    {
+        return ! $this->isVerified();
+    }
+
     /**
      * The attributes that should be cast to native types.
      *
